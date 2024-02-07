@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+:root {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+
+  /* base colors */
+  /* black gray white*/
+  --white-100: #f4f4f4;
+  --white-200: #dcdcdc;
+  --wthite-300: #b9b9b9;
+  --gray-100: #7e7e7e;
+  --gray-200: #5f5f5f;
+  --black-300: #3d3d3d;
+  --black-400: #171717;
+  --black-500: #141414;
+  --black-600: #020202;
+
+  /* plants colors */
+  /* green */
+  --light-green-100: #c2dfbd;
+  --light-green-200: #a4d39d;
+  --medium-green-300: #82bf78;
+  --medium-green-400: #62ab56;
+  --dark-green: #419334;
+  /* cyan */
+  --light-cyan-100: #9dbab7;
+  --light-cyan-200: #769f9b;
+  --medium-cyan-300: #5a908a;
+  --medium-cyan-400: #408079;
+  --dark-cyan: #276f67;
+  /* yellow */
+  --light-yellow-100: #e9f4ce;
+  --light-yellow-200: #ddf0b2;
+  --medium-yellow-300: #c1d989;
+  --medium-yellow-400: #a5c262;
+  --dark-yellow: #87a73b;
+
+  /* font families */
+  --ff-base: "Montserrat", sans-serif;
+
+  /* font size */
+  --fs-small: 0.875rem; /* 14px / 16px (base do :root) */
+  --fs-medium: 1rem; /* 16px / 16px (base do :root) */
+  --fs-large: 1.25rem; /* 20px / 16px (base do :root) */
+}
