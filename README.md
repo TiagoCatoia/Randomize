@@ -18,8 +18,6 @@ O Dockerfile está configurado para:
 
 ### Automatizar a Criação do Contêiner
 
-Para criar e executar o contêiner:
-
 1- Criar a imagem Docker:
 
 ```bash
@@ -40,5 +38,5 @@ http://localhost:5173/
 
 ### Observação .env
 
-**Este reposítório comtém um .env, mesmo que não seja correto compartilhar chaves de acesso privada,
+**Este reposítório contém um .env, mesmo que não seja correto compartilhar chaves de acesso privada,
 estou disponibilizando as chaves de 3 APIs para fins de teste**
