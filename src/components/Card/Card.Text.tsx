@@ -1,12 +1,11 @@
 import "./Card.css";
 
 type CardTextProps = {
-  page?: string;
   description: string;
   title?: string;
 };
 
-export const CardText = ({ page, description, title }: CardTextProps) => {
+export const CardText = ({ description, title }: CardTextProps) => {
   const truncatedDescription =
     description.length > 130 ? `${description.slice(0, 300)}...` : description;
 

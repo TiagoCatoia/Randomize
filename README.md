@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Projeto Randomize - Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação de treinamento onde o frontend foi desenvolvido com React e Vite, consumindo imagens e descrição de diferentes APIs.
 
-Currently, two official plugins are available:
+## Configuração e Execução
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Criar o Dockerfile
 
-## Expanding the ESLint configuration
+O Dockerfile está configurado para:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Utilizar a imagem base do Node.js (**node:18-slim**)
+- Define o diretório de trabalho como **/app**
+- Copia os arquivos necessários (**package.json**, **package-lock.json** e o código da aplicação)
+- Instala as dependências com **npm install**
+- Executa o comando de build com **npm run build**
+- Expõe a porta **5173**
+- Executa o servidor de desenvolvimento com **npm run dev**
 
-- Configure the top-level `parserOptions` property like this:
+### Automatizar a Criação do Contêiner
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Para criar e executar o contêiner:
+
+1- Criar a imagem Docker:
+
+```bash
+docker build -t randomize .
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2- Executar o contêiner:
+
+```bash
+docker run -p 5173:5173 randomize
+```
+
+Após executar, você pode acessar a aplicação em:
+
+```bash
+http://localhost:5173/
+```
+
+### Observação .env
+
+**Este reposítório comtém um .env, mesmo que não seja correto compartilhar chaves de acesso privada,
+estou disponibilizando as chaves de 3 APIs para fins de teste**

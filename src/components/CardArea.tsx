@@ -41,7 +41,6 @@ export const CardArea = ({ data, page }: CardAreaProps) => {
               }
             />
             <Cards.Text
-              page={page}
               title={data.common_name}
               description={data.description}
             />
@@ -50,14 +49,13 @@ export const CardArea = ({ data, page }: CardAreaProps) => {
         {data && "explanation" in data && (
           <>
             <Cards.Image page={page} url={data.url} />
-            <Cards.Text page={page} description={data.explanation} />
+            <Cards.Text description={data.explanation} />
           </>
         )}
         {data && "recipes" in data && (
           <>
             <Cards.Image page={page} url={data.recipes[0].image} />
             <Cards.Text
-              page={page}
               title={data.recipes[0].title}
               description={data.recipes[0].instructions.replace(/<[^>]*>/g, "")}
             />
